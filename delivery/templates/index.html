@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% import "macros/rest_list.html" as rest_list %}
+
+{% block title %}
+<section class="hero is-info">
+    <div class="hero-body">
+        <p class="title">
+        Delivery Service
+        </p>
+        <p class="subtitle">
+        Brings you food everywhere.
+        </p>
+    </div>
+</section>
+{% endblock title %}
+
+<section class="section">
+    <div class="container"> 
+
+{% block main %}
+<div class="columns">
+    {{ rest_list.cards([1, 2, 3 ,4]) }}
+</div>
+{% endblock main %}
+
+

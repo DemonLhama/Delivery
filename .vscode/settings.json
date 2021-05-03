@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "c:\\Users\\iqnik\\PycharmProjects\\Delivery_Project\\venv\\Scripts\\python.exe",
+
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_flask_sqlalchemy",
+                        
+    ]
+}

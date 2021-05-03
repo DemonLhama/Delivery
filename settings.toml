@@ -1,0 +1,29 @@
+[default]
+DEBUG = false
+FLASK_ADMIN_SWATCH = "cerulean"
+ADMIN_NAME = "Delivery Project"
+EXTENSIONS = [    
+    "delivery.ext.db:init_app",
+    "delivery.ext.auth:init_app",
+    "delivery.ext.admin:init_app",
+    "delivery.ext.migrate:init_app",
+    "delivery.ext.cli:init_app",
+    "delivery.ext.toolbar:init_app",
+    "delivery.ext.site:init_app",
+]
+
+
+
+[development]
+DEBUG = true
+SECRET_KEY = '%*\x97\n\xfd\xbd\xa1o\xf8\xd9\x9b\x08\x9e\xfa\xbe\xe3'
+SQLALCHEMY_DATABASE_URI = 'sqlite:///delivery_project.db'
+SQLALCHEMY_TRACK_MODIFICATIONS = false
+DEBUG_TB_TEMPLATE_EDITOR_ENABLED = true
+DEBUG_TB_PROFILER_ENABLED = true
+DEBUG_TB_INTERCEPT_REDIRECTS = false
+ADMIN_NAME = "Delivery Project (dev mode)"
+
+
+[production]
+SQLALCHEMY_TRACK_MODIFICATIONS = false
