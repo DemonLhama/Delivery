@@ -6,10 +6,10 @@ from delivery.ext.db import db
 ALG = "pbkdf2:sha256"
 
 
-def create_user(email:str, password:str, admin:bool = False) -> User:
+def create_user(email:str, passwd:str, admin:bool = False) -> User:
     user = User(
         email = email, 
-        password = generate_password_hash(password, ALG),
+        passwd = generate_password_hash(passwd, ALG),
         admin = admin,
         )
     db.session.add(user)

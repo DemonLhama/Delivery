@@ -20,7 +20,7 @@ def registration():
     if form.validate_on_submit():
         create_user(
             email=form.email.data,
-            password=form.password.data
+            passwd=form.password.data
         )
         
         
