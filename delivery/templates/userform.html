@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}
+<section class="hero is-info">
+    <div class="hero-body">
+        <p class="title">
+        Delivery Service
+        </p>
+        <p class="subtitle">
+        Brings you food everywhere.
+        </p>
+    </div>
+</section>
+{% endblock title %}
+
+<section class="section">
+    <div class="container">
+        <h1>Sign up in our site!</h1> 
+
+{% block main %}
+<form action="{{url_for('site.registration')}}" method="POST" enctype="multipart/form-data">
+    {{form.csrf_token}}
+
+    {{form.email.label}}<br>
+    {{form.email(size=20)}}<br>
+
+    {{form.password.label}}<br>
+    {{form.password(size=20)}}<br>
+
+    {{form.foto.label}}<br>
+    {{form.foto}}<br>
+
+    <input type="Submit" value="Sign up!" />
+</form>
+{% endblock main %}
