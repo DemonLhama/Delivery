@@ -1,4 +1,3 @@
-from delivery.ext.auth import models
 from delivery.ext.auth.commands import list_users, add_user
 
 from delivery.ext.db import db
