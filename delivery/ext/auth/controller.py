@@ -3,7 +3,7 @@ from delivery.ext.auth.models import User
 from delivery.ext.db import db
 
 
-#To create a user: You will need the class User created in models and the db (SQLachemy)
+#To create a user: You will need the class User created in models and the db (SQLalchemy)
 # In password use werkzeug hashing to add an algorithm with 
 # generate_password_hash and his values to hinder user password (SECURITY!)    
 
