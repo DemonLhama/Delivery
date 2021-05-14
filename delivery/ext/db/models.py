@@ -1,5 +1,24 @@
 from delivery.ext.db import db
 
+# To understand what is happening here:
+# We have 7 tables (Category, Store, Items, Order, Order_Items, Checkout and Address),
+# with each one containing it's attributes (columns).
+
+### User table is alocate in the auth directory for best management.
+
+# primary_key=True to set this column as the table's primary key. 
+
+# unique=True do not allow duplicate values in this column.
+
+# ForeignKey represents a relationship between two tables (one-to-many relationship),
+# db.relationship() represents the object-oriented view of that realtionship
+# Example: the primary key in Category will work as the "one" side, we will have an id for each category
+# and in Store the db.relationship() will work as the "many" side,
+# so if you look in the category_id there will be many stores for each id
+# but in a Store there will be only one category_id that represents the store.
+
+
+
 
 class Category(db.Model):
     __tablename__ = "category"
